@@ -1,0 +1,23 @@
+# Git commit
+
+O comando `git commit` captura um instantâneo das mudanças preparadas do projeto no momento. Os instantâneos com commit podem ser considerados versões "seguras" de um projeto, o Git nunca os altera, a menos que você peça a ele. Antes da execução de `git commit`, o comando `git add` é usado para promover ou "preparar" mudanças no projeto que são armazenadas em um commit. Estes dois comandos - `git commit` e `git add` - estão entre os mais usados.
+
+## Git commit versus SVN commit
+
+Embora compartilhem o mesmo nome, o `git commit` não tem semelhanças com o `svn commit`. Este termo compartilhado pode ser motivo de confusão para os iniciantes no Git que têm experiência em svn, e é importante enfatizar a diferença. Comparar o `git commit` com o `svn commit` é comparar um modelo de aplicação centralizado (svn) com um modelo de aplicação distribuído (Git). No SVN, um commit realiza mudanças a partir do cliente SVN local até um repositório SVN compartilhado e centralizado. No Git, os repositórios são distribuídos e o commit dos instantâneos é feito no repositório local, o que não requer interação alguma com outros repositórios do Git. Os commits do Git podem ser realizados mais tarde em repositórios remotos arbitrários.
+
+## Como funciona
+
+Em um nível alto, o Git pode ser considerado um utilitário de gerenciamento de cronograma. Os commits são as unidades estruturais de um cronograma de projeto Git. Podem ser considerados instantâneos ou marcos ao longo do cronograma de um projeto Git. São criados com o comando `git commit` para capturar o estado de um projeto naquele momento. O commit dos instantâneos do Git sempre é feito no repositório local, muito diferente do SVN, no qual se faz o commit de uma cópia do trabalho no repositório central. Já o Git não força você a interagir com o repositório central até que você esteja pronto. Assim como a área de staging é um intermediário entre o diretório de trabalho e o histórico do projeto, o repositório local de cada desenvolvedor é um intermediário entre as respectivas contribuições e o repositório central.
+
+Assim, o modelo de desenvolvimento básico para os usuários do Git muda. Em vez de fazer uma alteração e seu commit no repositório central, os desenvolvedores do Git podem acumular commits nos repositórios locais, o que apresenta muitas vantagens em relação à colaboração no estilo SVN: facilita a divisão de um recurso em commits menores, mantém commits relacionados agrupados e limpa o histórico local antes de as publicar no repositório central. Assim, os desenvolvedores também podem trabalhar em um ambiente isolado, adiando a integração até estarem em um ponto conveniente para mesclar com outros usuários. Embora o isolamento e integração adiada sejam benéficos em caráter individual, é de interesse da equipe integrar com frequência e em unidades pequenas. Para mais informações sobre as melhores práticas de colaboração da equipe Git, leia sobre como as equipes estruturam os próprios fluxos de trabalho do Git.
+
+## Instantâneos, não diferenças
+
+Além das distinções práticas entre o SVN e o Git, a implementação subjacente também segue filosofias de design com total divergência. Enquanto o SVN monitora as diferenças de um arquivo, o modelo de controle de versão do Git é baseado em instantâneos. Por exemplo, um commit do SVN consiste em uma diferença em comparação ao arquivo original adicionado ao repositório. Por outro lado, o Git registra todo o conteúdo de cada arquivo em cada commit.
+
+![Tutorial do Git: Instantâneos, não diferenças](https://wac-cdn.atlassian.com/dam/jcr:7406fe56-d36d-44cf-92e3-b28e4bae36f8/02.svg?cdnVersion=377)
+
+Isto torna muitas operações de Git bem mais rápidas do que o SVN, uma vez que uma versão específica de um arquivo não precisa ser "montada" a partir das diferenças, a revisão completa de cada arquivo fica disponível de imediato no banco de dados interno do Git.
+
+O modelo de instantâneo do Git tem um impacto mais profundo em quase todos os aspectos do modelo de controle de versão, afetando tudo, desde as ferramentas de branch e mesclagem, até os fluxos de trabalho colaborativos.

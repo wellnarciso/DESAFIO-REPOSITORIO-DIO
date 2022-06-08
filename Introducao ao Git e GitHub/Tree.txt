@@ -1,0 +1,5 @@
+# O que é uma Tree?
+
+A tree representa um diretório, contendo uma mistura de blobs e trees. Podemos descobrir que ela resolve usar *git rev-parse*, para determinar que essa tree é um objeto com o hash *2b61e34…*.
+
+Como é que essa tree é criada? Bem, mais uma vez, é um objeto bem formatado que é numerado de acordo com o sha1. O tipo de objeto é *tree*, e em vez de ter os valores simples, como o blob, a tree é um conjunto de valores de índices apontando para os objetos, juntamente com um modo (tipicamente 100644 para arquivos e 100755 para diretórios). No entanto, sabemos o tamanho do hash SHA, por isso não precisa ser em números legíveis, podemos serializá-lo como bytes. O comprimento fica em 28 bytes por linha, além de muitos bytes que estão no nome do arquivo.

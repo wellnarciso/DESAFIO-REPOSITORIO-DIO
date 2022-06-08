@@ -1,0 +1,41 @@
+# O que é SHA-1 e como é usado para verificação de dados?
+
+SHA-1 (abreviação de *Secure Hash Algorithm 1* ) é uma das várias funções de hash criptográficas .
+
+SHA-1 é mais frequentemente usado para verificar se um arquivo não foi alterado. Isso é feito produzindo uma soma de verificação antes de o arquivo ser transmitido e, novamente, quando ele atinge seu destino.
+
+O arquivo transmitido pode ser considerado genuíno apenas se **ambas as somas de verificação forem idênticas**.
+
+Publicidade
+
+## História e vulnerabilidades da função SHA Hash
+
+SHA-1 é apenas um dos quatro algoritmos da família Secure Hash Algorithm (SHA). A maioria foi desenvolvida pela Agência de Segurança Nacional dos Estados Unidos (NSA) e publicada pelo Instituto Nacional de Padrões e Tecnologia (NIST).
+
+SHA-0 tem um tamanho de resumo de mensagem de 160 bits (valor hash) e foi a primeira versão desse algoritmo. Os valores de hash SHA-0 têm 40 dígitos. Foi publicado com o nome de “SHA” em 1993, mas não foi usado em muitos aplicativos porque foi rapidamente substituído pelo SHA-1 em 1995 devido a uma falha de segurança.
+
+SHA-1 é a segunda iteração dessa função hash criptográfica. O SHA-1 também tem um resumo da mensagem de 160 bits e buscou aumentar a segurança corrigindo uma fraqueza encontrada no SHA-0. No entanto, em 2005, o SHA-1 também foi considerado inseguro.
+
+Uma vez que as deficiências criptográficas foram encontradas no SHA-1, o NIST fez uma declaração em 2006 encorajando as agências federais a adotarem o uso do SHA-2 até o ano de 2010. O SHA-2 é mais forte do que o SHA-1 e os ataques feitos contra o SHA-2 são improváveis acontecer com o poder de computação atual.
+
+Não apenas agências federais, mas até mesmo empresas como Google, Mozilla e Microsoft começaram a planos para parar de aceitar certificados SSL SHA-1 ou já bloquearam o carregamento desses tipos de páginas.
+
+O Google tem provas de uma colisão SHA-1 que torna esse método não confiável para gerar somas de verificação exclusivas, seja em relação a uma senha, arquivo ou qualquer outro dado. Você pode baixar dois arquivos PDF exclusivos do SHAttered para ver como isso funciona. Use uma calculadora SHA-1 da parte inferior desta página para gerar a soma de verificação para ambos e você descobrirá que o valor é exatamente o mesmo, embora contenham dados diferentes.
+
+## Como o SHA-1 é usado?
+
+Um exemplo do mundo real onde o SHA-1 pode ser usado é quando você está inserindo sua senha na página de login de um site. Embora isso aconteça em segundo plano sem o seu conhecimento, pode ser o método que um site usa para verificar com segurança se sua senha é autêntica.
+
+Neste exemplo, imagine que você está tentando fazer login em um site que visita com frequência. Cada vez que você solicitar o logon, será necessário inserir seu nome de usuário e senha.
+
+Se o site usar a função de hash criptográfico SHA-1, significa que sua senha é transformada em uma soma de verificação depois de inserida. Essa soma de verificação é então comparada com a soma de verificação que está armazenada no site que se relaciona com sua senha atual, caso você a tenha não mudou sua senha desde que você se inscreveu ou se apenas mudou há momentos. Se os dois corresponderem, você terá acesso; se não o fizerem, você informará que a senha está incorreta.
+
+Outro exemplo onde a função de hash SHA-1 pode ser usada é para verificação de arquivo. Alguns sites fornecem a soma de verificação SHA-1 do arquivo na página de download para que, ao baixar o arquivo, você possa verificar a soma de verificação por si mesmo para garantir que o arquivo baixado é o mesmo que você pretendia baixar.
+
+Você pode se perguntar onde está um uso real neste tipo de verificação. Considere um cenário em que você conhece a soma de verificação SHA-1 de um arquivo do site do desenvolvedor, mas deseja baixar a mesma versão de um site diferente. Você pode então gerar a soma de verificação SHA-1 para seu download e compará-la com a soma de verificação genuína da página de download do desenvolvedor.
+
+Se os dois forem diferentes, isso não significa apenas que o conteúdo do arquivo não é idêntico, mas que *pode* haver malware oculto no arquivo, os dados podem ser corrompidos e causar danos aos arquivos do seu computador, o arquivo não tem nada a ver com o arquivo real, etc.
+
+No entanto, também pode significar apenas que um arquivo representa uma versão mais antiga do programa do que o outro, já que mesmo uma pequena alteração gerará um valor de checksum exclusivo.
+
+Você também pode querer verificar se os dois arquivos são idênticos se estiver instalando um service pack ou algum outro programa ou atualização, pois ocorrem problemas se alguns dos arquivos estiverem ausentes durante a instalação.

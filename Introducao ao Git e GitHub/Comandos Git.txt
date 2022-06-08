@@ -1,0 +1,21 @@
+# Comandos Git
+
+### git init : ###
+
+- Para iniciar o Repositório;
+
+### git add :
+
+- Para mover arquivos e iniciar o versionamento e para commitar;
+
+### git commit:
+
+- Criação de Commits;
+
+### Ls :
+
+- Mostra a lista de diretórios do diretório atual;
+
+### Ls -a :
+
+- Mostra a lista de diretórios ocultos.

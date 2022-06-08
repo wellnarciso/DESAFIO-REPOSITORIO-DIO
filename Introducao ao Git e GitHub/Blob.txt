@@ -1,0 +1,5 @@
+# O que são Blobs
+
+Um blob é um tipo de dados que pode armazenar binário dados. Isso é diferente da maioria dos outros tipos de dados usados em bancos de dados, como inteiros, Números de ponto flutuante, caracteres e cordas, que armazenam letras e números. Como os blobs podem armazenar dados binários, eles podem ser usados para armazenar imagens ou outros arquivos multimídia. Por exemplo, um álbum de fotos pode ser armazenado em um banco de dados usando um tipo de dados de blob para as imagens e um tipo de dados de sequência para as legendas.
+
+Como os blobs são usados para armazenar objetos como imagens, arquivos de áudio e videoclipes, eles geralmente exigem muito mais espaço do que outros tipos de dados. A quantidade de dados que um blob pode armazenar varia de acordo com o tipo de banco de dados, mas alguns bancos de dados permitem tamanhos de vários gigabytes. Agora que é uma grande bolha!
